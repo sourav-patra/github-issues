@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+  body {
+    margin: 0;
+    padding: 10px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+
+.loader {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  border-top: 3px solid #444;
+  width: 25px;
+  height: 25px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

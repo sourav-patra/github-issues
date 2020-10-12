@@ -1,0 +1,18 @@
+<section class="issue-details-container">
+  <header *ngIf="issueDetails">
+    {{ issueDetails.title }} #{{ issueDetails.number }}
+  </header>
+
+  <div class="issue-type">Open</div>
+
+  <main class="details-container">
+    <section
+      [innerHTML]="issueDetails?.body"
+      class="common-border issue-details"
+    ></section>
+
+    <aside class="label-container">
+      <div class="common-border labels">Labels</div>
+    </aside>
+  </main>
+</section>

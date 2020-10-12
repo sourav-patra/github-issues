@@ -1,0 +1,38 @@
+<section class="issue-list-container">
+  <div class="search-issues">
+    <input placeholder="Search: Open Issues" />
+  </div>
+
+  <main>
+    <header class="common-border table-header">
+      <span class="header-items">{{ openIssues || "--" }} Open</span>
+      <span class="header-items">{{ closedIssues || "--" }} Closed</span>
+      <span class="header-items">Labels Filter</span>
+    </header>
+    <section class="table-body">
+      <div
+        class="common-border issue"
+        *ngFor="let item of issueDetails | async"
+      >
+        <div (click)="showDetails(item)" class="issue-link">
+          <span>{{ item.title }}</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="pagination">
+    <div class="paginator">
+      <div (click)="previousPage()" class="paginator-item">Previous</div>
+      <div
+        [ngClass]="{ active: currentPageNumber === page }"
+        (click)="getDetailsForPage(page)"
+        *ngFor="let page of pages$ | async"
+        class="paginator-item"
+      >
+        {{ page }}
+      </div>
+      <div (click)="nextPage()" class="paginator-item">Next</div>
+    </div>
+  </section>
+</section>

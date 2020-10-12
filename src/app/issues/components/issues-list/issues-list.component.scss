@@ -1,0 +1,71 @@
+.issue-list-container {
+  .common-border {
+    border: 1px solid #000;
+  }
+
+  .search-issues input {
+    width: 200px;
+    border: 1px solid #eee;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    line-height: 15px;
+    outline: none;
+    margin: 1rem 0;
+  }
+
+  main {
+    .table-header {
+      display: flex;
+      align-items: center;
+      background: #eee;
+      padding: 1rem;
+
+      .header-items {
+        padding: 0 1rem;
+      }
+    }
+
+    .table-body {
+      min-height: 400px;
+      .issue {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        border-top: none;
+
+        .issue-link {
+          cursor: pointer;
+          color: #2a7de1;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  section.pagination {
+    margin: 1rem 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    .paginator {
+      display: flex;
+      align-items: center;
+
+      .paginator-item {
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 10px 5px;
+        color: #2a7de1;
+        min-width: 20px;
+        text-align: center;
+        cursor: pointer;
+
+        &.active {
+          background: #2a7de1;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
